@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Agenda CLV">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<title>Agenda CLV — Gestão da oficina</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+ <div class="brand"><div class="brandmark">CLV</div><div><strong>AGENDA CLV</strong><small>GESTÃO INTELIGENTE DA OFICINA</small></div></div>
+ <div class="top-actions"><button class="iconbtn" title="Instalar aplicativo" onclick="installApp()">⇩</button><button class="iconbtn" title="Ajustes e backup" onclick="openSettings()">⚙</button></div>
+</header>
+<nav class="bottomnav" id="nav">
+ <button class="navbtn active" data-page="home" onclick="go('home')"><span class="ico">⌂</span>Início</button>
+ <button class="navbtn" data-page="agenda" onclick="go('agenda')"><span class="ico">▦</span>Agenda</button>
+ <button class="navbtn new" data-page="new" onclick="go('new')"><span class="ico">＋</span>Novo serviço</button>
+ <button class="navbtn" data-page="clients" onclick="go('clients')"><span class="ico">♙</span>Clientes</button>
+ <button class="navbtn" data-page="alerts" onclick="go('alerts')"><span class="ico">♧</span>Alertas</button>
+</nav>
+<main id="main"></main>
+</div>
+<div class="modalback" id="modalback" onclick="if(event.target===this)closeModal()"><div class="modal"><div class="modalhead"><h2 id="modalTitle">Detalhes</h2><button class="close" onclick="closeModal()">×</button></div><div id="modalBody"></div></div></div>
+<div class="toast" id="toast"></div>
+<div class="lock" id="lock"></div>
+<script src="js/storage.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

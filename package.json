@@ -1,0 +1,10 @@
+{
+  "name": "agenda-clv",
+  "version": "1.0.0",
+  "description": "Agenda CLV - gestão de oficina (PWA offline, sem nuvem)",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve -l 8080 .",
+    "check": "node --check js/app.js && node --check js/storage.js && node --check sw.js"
+  }
+}
